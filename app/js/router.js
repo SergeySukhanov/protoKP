@@ -11,16 +11,17 @@ var Router = Backbone.Router.extend({
     routes:{
         "":"accounts",
         "accounts":"accounts",
+        "accounts/:any":"accounts",
         "notifications":"notifications",
         "responses":"responses"
     },
 
+    before:function(){
+        console.log("bla");
+    },
+
     accounts:function(){
-        Tools.loadTemplate('pages/accounts', function(tmpl){
-            Config.views.accounts = new AccountsView({
-                template:tmpl
-            });
-        });
+        Config.routers.accountsRouter = new AccountsRouter("accounts");
     },
 
     notifications:function(){
@@ -28,6 +29,7 @@ var Router = Backbone.Router.extend({
             Config.views.notifications = new NotificationsView({
                 template:tmpl
             });
+            Config.starter.accountWrap = false;
         });
     },
 
@@ -36,6 +38,7 @@ var Router = Backbone.Router.extend({
             Config.views.responses = new ResponsesView({
                 template:tmpl
             });
+            Config.starter.accountWrap = false;
         });
     },
 

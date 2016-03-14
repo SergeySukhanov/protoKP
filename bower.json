@@ -22,6 +22,8 @@
     "lodash": "~4.6.1",
     "ractive": "~0.7.3",
     "ractive-backbone": "ractive-adaptors-backbone#~0.3.0",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "backbone-async-route-filter": "*",
+    "backbone.subroute": "~0.4.6"
   }
 }

@@ -7,8 +7,6 @@
  * © 2016 All Rights Reserved
  */
 
-$(document).ready(function(){
-    var router = new Router();
-    Config.routers.mainRouter = router;
-    Backbone.history.start();
+var GetAccount = Ractive.extend({
+    el:"#accountContainer"
 });

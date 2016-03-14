@@ -8,11 +8,13 @@
  */
 
 var Config = {
-    starter:{},
+    starter:{
+        accountWrap:false
+    },
 
     views:{},
     models:{},
     controllers:{},
-    router:null,
+    routers:{},
     textTemplates:{}
 };

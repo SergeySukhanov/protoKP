@@ -8,6 +8,5 @@
  */
 
 var AccountsView = Ractive.extend({
-    el:"#mainSection",
-    template:"<div>accounts</div>"
+    el:"#mainSection"
 });
