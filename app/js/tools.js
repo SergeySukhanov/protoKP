@@ -10,12 +10,18 @@
 
 var Tools = {
     loadTemplate:function(name, callback){
+
+        if(Config.textTemplates[name]){
+            return Config.textTemplates[name]
+        }
         $.ajax({
             url:"app/templates/" + name + ".html",
             type:"GET",
             dataType:'html'
         }).then(function(tmpl){
+            Config.textTemplates[name] = tmpl;
             callback(tmpl);
+
         })
     }
 };

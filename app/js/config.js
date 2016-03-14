@@ -13,5 +13,6 @@ var Config = {
     views:{},
     models:{},
     controllers:{},
-    router:null
+    router:null,
+    textTemplates:{}
 };
