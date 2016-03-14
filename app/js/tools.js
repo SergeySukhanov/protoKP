@@ -9,5 +9,13 @@
 
 
 var Tools = {
-
-}
+    loadTemplate:function(name, callback){
+        $.ajax({
+            url:"app/templates/" + name + ".html",
+            type:"GET",
+            dataType:'html'
+        }).then(function(tmpl){
+            callback(tmpl);
+        })
+    }
+};

@@ -16,20 +16,39 @@ var Router = Backbone.Router.extend({
     },
 
     accounts:function(){
-        Config.views.accounts = new AccountsView();
+        Tools.loadTemplate('pages/accounts', function(tmpl){
+            Config.views.accounts = new AccountsView({
+                template:tmpl
+            });
+        });
     },
 
     notifications:function(){
-        Config.views.notifications = new NotificationsView();
+        Tools.loadTemplate('pages/notifications', function(tmpl){
+            Config.views.notifications = new NotificationsView({
+                template:tmpl
+            });
+        });
     },
 
     responses:function(){
-        Config.views.responses = new ResponsesView();
+        Tools.loadTemplate('pages/responses', function(tmpl){
+            Config.views.responses = new ResponsesView({
+                template:tmpl
+            });
+        });
     },
 
     initialize:function(){
-        Config.views.header = new HeaderView();
-        Config.views.footer = new FooterView();
-        console.log("router is start!");
+        Tools.loadTemplate('layout/header', function(tmpl){
+            Config.views.header = new HeaderView({
+                template:tmpl
+            });
+        });
+        Tools.loadTemplate('layout/footer', function(tmpl){
+            Config.views.footer = new FooterView({
+                template:tmpl
+            });
+        });
     }
 });
