@@ -7,8 +7,7 @@
  * © 2016 All Rights Reserved
  */
 
-$(document).ready(function(){
-    var router = new Router();
-    Config.router = router;
-    Backbone.history.start();
+var HeaderView = Ractive.extend({
+    el:"#header",
+    template:"<div>header</div>"
 });

@@ -7,8 +7,8 @@
  * © 2016 All Rights Reserved
  */
 
-$(document).ready(function(){
-    var router = new Router();
-    Config.router = router;
-    Backbone.history.start();
+
+var NotificationsView = Ractive.extend({
+    el:"#mainSection",
+    template:"<div>notifications</div>"
 });

@@ -10,21 +10,46 @@
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <!--APP-->
     <script src="app/js/config.js"></script>
+    <script src="app/js/tools.js"></script>
+
+    <script src="app/js/models/accounts.js"></script>
+    <script src="app/js/models/notifications.js"></script>
+    <script src="app/js/models/responses.js"></script>
+
+    <script src="app/js/views/header.js"></script>
+    <script src="app/js/views/footer.js"></script>
+    <script src="app/js/views/accounts.js"></script>
+    <script src="app/js/views/notifications.js"></script>
+    <script src="app/js/views/responses.js"></script>
+
+    <script src="app/js/router.js"></script>
     <script src="app/js/app.js"></script>
     <!--styles-->
     <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
     <link rel="stylesheet" href="app/css/main.css"/>
+
+    <!---templates-->
+
     <title></title>
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header id="header">
 
         </header>
-        <section>
+        <nav>
+            <ul>
+                <li><a href="#accounts">Accounts</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#responses">responses</a></li>
+            </ul>
+        </nav>
+        <section id="mainSection">
 
         </section>
-        <footer></footer>
+        <footer id="footer">
+
+        </footer>
     </div>
 </body>
 </html>
