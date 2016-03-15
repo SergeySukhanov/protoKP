@@ -9,6 +9,7 @@
 
 var AccountsRouter = Backbone.SubRoute.extend({
     routes:{
+        "account/:id": 'showAccount',
         "":"filter",
         "*filter":"filter"
     },
@@ -84,6 +85,10 @@ var AccountsRouter = Backbone.SubRoute.extend({
             })();
                 break;
         }
+    },
+
+    showAccount: function(id) {
+        console.log("show account with id: " + id);
     }
 
 });
