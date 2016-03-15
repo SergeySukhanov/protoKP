@@ -133,15 +133,37 @@ nav.main-menu a:hover {
 }
 
 .notification-component .callout.alert {
-    background-color: transparent;
-    color: #ffffff;
+    background-color: rgb(255, 255, 255);
+    color: #212121;
     border-left: 10px solid #6F1010;
     font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .notification-component .callout.primary {
-    background-color: transparent;
-    color: #ffffff;
+    background-color: rgb(255, 255, 255);
+    color: #212121;
     border-left: 10px solid #137911;
     font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cash-number{
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+.cash-number b{
+    font-size: 27px;
+    display: block;
+    color: #ffffff;
+}
+
+.cash-number small{
+    color: #ffffff;
+    font-size: 12px;
 }
