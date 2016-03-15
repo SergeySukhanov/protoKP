@@ -10,6 +10,5 @@
 var NewAccount = Ractive.extend({
     el:"#accountContainer",
     complete:function(){
-
     }
 });
