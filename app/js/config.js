@@ -16,5 +16,35 @@ var Config = {
     models:{},
     controllers:{},
     routers:{},
-    textTemplates:{}
+    textTemplates:{},
+
+    data: {
+        newAccounts: {
+            accounts: [{
+                number: "1",
+                money: "200",
+                discount: "10%"
+            }, {
+                number: "2",
+                money: "100",
+                discount: "20%"
+            },  {
+                number: "9",
+                money: "900",
+                discount: "15%"
+            }
+            ]
+        },
+        approvedAccounts: {
+            accounts: [{
+                number: "2",
+                money: "200",
+                discount: "20%"
+            }, {
+                number: "3",
+                money: "300",
+                discount: "30%"
+            }]
+        }
+    }
 };

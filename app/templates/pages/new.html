@@ -1,1 +1,23 @@
 <b>new</b>
+<button on-click='activate'>Activate!</button>
+
+<table>
+    <thead>
+    <tr>
+        <th>1</th>
+        <th class='sortable' on-click='sort:number'>Номер счёта1</th>
+        <th class='sortable' on-click='sort:money'>Сумма платежа</th>
+        <th class='sortable' on-click='sort:discount'>Дисконт</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each sort( accounts, sortColumn ) :num}}
+    <tr>
+        <td><input type="checkbox"></td>
+        <td><a href='#'>{{number}}</a></td>
+        <td>{{money}}</td>
+        <td>{{discount}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
