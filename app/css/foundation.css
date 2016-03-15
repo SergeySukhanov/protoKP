@@ -747,7 +747,8 @@ button {
   margin-right: 0;
   float: left; }
 
-@media screen and (min-width: 40em) {
+
+@media screen and (min-width: 1024px) {
   .medium-1 {
     width: 8.33333%; }
   .medium-push-1 {
@@ -955,7 +956,7 @@ button {
     margin-right: 0;
     float: left; } }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 1300px) {
   .large-1 {
     width: 8.33333%; }
   .large-push-1 {
