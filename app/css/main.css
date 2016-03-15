@@ -125,6 +125,7 @@ nav.main-menu a:hover {
 .block-component h3{
     color: #ffffff;
     font-size: 23px;
+    position: relative;
 }
 
 .block-component.notification-component ul{
@@ -152,9 +153,20 @@ nav.main-menu a:hover {
     white-space: nowrap;
 }
 
+.notification-component .callout.warning {
+    background-color: rgb(255, 255, 255);
+    color: #212121;
+    border-left: 10px solid #C58E14;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .cash-number{
     padding-top: 15px;
     padding-bottom: 35px;
+    text-align: center;
 }
 
 .cash-number b{
@@ -166,4 +178,32 @@ nav.main-menu a:hover {
 .cash-number small{
     color: #ffffff;
     font-size: 12px;
+}
+
+.label-count{
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    left: 0;
+    margin-left: 123px;
+    background: #901D1D;
+    padding: 6px 6px;
+    border-radius: 97px;
+    font-weight: 900;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+path.slice{
+    stroke-width:2px;
+}
+
+polyline{
+    opacity: .0;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
 }

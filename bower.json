@@ -24,6 +24,7 @@
     "ractive-backbone": "ractive-adaptors-backbone#~0.3.0",
     "bootstrap": "~3.3.6",
     "backbone-async-route-filter": "*",
-    "backbone.subroute": "~0.4.6"
+    "backbone.subroute": "~0.4.6",
+    "d3": "~3.5.16"
   }
 }

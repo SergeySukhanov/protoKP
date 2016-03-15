@@ -60,7 +60,7 @@ var Tools = {
         return sortedArray;
     },
 
-    loadAndRenderGrid: function(el, accounts) {
+    loadAndRenderGrid: function(el, accounts, type) {
         var that = this;
         Tools.loadTemplate('pages/consumer-grid', function(tmpl){
             console.log("Consumer grid init");
@@ -69,7 +69,8 @@ var Tools = {
                 el: el,
                 data: {
                     accounts: accounts,
-                    sort: Tools.sort
+                    sort: Tools.sort,
+                    type:type
                 }
             });
 
