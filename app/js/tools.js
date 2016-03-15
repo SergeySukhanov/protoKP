@@ -24,5 +24,13 @@ var Tools = {
 
             })
         }
+    },
+
+    login:function(){
+        localStorage.setItem("token", "123456789");
+    },
+
+    logout:function(){
+        localStorage.removeItem("token");
     }
 };

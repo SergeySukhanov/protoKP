@@ -9,5 +9,17 @@
 
 var HeaderView = Ractive.extend({
     el:"#header",
-    template:"<div>header</div>"
+    template:"<div>header</div>",
+    magic:true,
+    complete:function(){
+        var ins = this;
+
+        ins.on({
+            logout:function(event){
+                Tools.logout();
+                Config.routers.mainRouter.navigate("auth", {trigger:true});
+            }
+        })
+    }
+
 });

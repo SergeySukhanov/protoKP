@@ -21,10 +21,12 @@ var Router = Backbone.Router.extend({
     before:{
         "*any":function(path, arr, next){
             console.log(arguments);
-            if(path === "auth"){
+            var token = localStorage.getItem("token");
 
+            if(token){
+                Config.accountToken = true;
             }else{
-
+                Config.accountToken = false;
             }
             next();
         }
@@ -73,12 +75,14 @@ var Router = Backbone.Router.extend({
     initialize:function(){
         Tools.loadTemplate('layout/header', function(tmpl){
             Config.views.header = new HeaderView({
-                template:tmpl
+                template:tmpl,
+                data:Config
             });
         });
         Tools.loadTemplate('layout/footer', function(tmpl){
             Config.views.footer = new FooterView({
-                template:tmpl
+                template:tmpl,
+                data:Config
             });
         });
     }

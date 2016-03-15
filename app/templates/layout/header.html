@@ -6,15 +6,21 @@
         </div>
     </div>
     <div class="small-6 columns">
+        {{#accountToken}}
         <nav class="main-menu">
             <a href="#dashboard">Dashboard</a>
             <a href="#accounts">Accounts</a>
             <a href="#responses">Responses</a>
             <a href="#notifications">Notifications</a>
         </nav>
+        {{else}}
+
+        {{/accountToken}}
     </div>
     <div class="small-3 columns">
+        {{#accountToken}}
         <b>Login name</b>
-        <a href="javascript:viod(0)" on-click="logout">Exit</a>
+        <a href="javascript:void(0)" on-click="logout">Exit</a>
+        {{/accountToken}}
     </div>
 </div>
