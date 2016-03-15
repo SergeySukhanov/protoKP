@@ -32,5 +32,27 @@ var Tools = {
 
     logout:function(){
         localStorage.removeItem("token");
+    },
+
+    sort: function (array, column) {
+        console.log("sort");
+
+        array = array.slice(); // clone, so we don't modify the underlying data
+
+        var sortedArray = array.sort(function (a, b) {
+            return a[column] < b[column] ? -1 : 1;
+        });
+
+        sortedArray.filter(function (account) {
+            var accept = false;
+            for (k in account) {
+                var val = account[k];
+                var found = val.indexOf("1");
+                accept = accept || found;
+            }
+            return accept;
+        });
+
+        return sortedArray;
     }
 };
