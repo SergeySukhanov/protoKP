@@ -9,5 +9,8 @@
 
 
 var ResolveAccount = Ractive.extend({
-    el:"#accountContainer"
+    el:"#accountContainer",
+    complete:function(){
+        Tools.loadAndRenderGrid($(this.el).find(".js-grid"), this.get().accounts);
+    }
 });

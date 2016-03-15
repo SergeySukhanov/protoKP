@@ -47,6 +47,7 @@ var Tools = {
             return a[column] < b[column] ? -1 : 1;
         });
 
+        /*
         sortedArray.filter(function (account) {
             var accept = false;
             for (k in account) {
@@ -56,9 +57,11 @@ var Tools = {
             }
             return accept;
         });
+        */
 
         return sortedArray;
     },
+
 
     loadAndRenderGrid: function(el, accounts) {
         var that = this;

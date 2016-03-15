@@ -41,7 +41,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                     console.log("NewAccount init");
                     Config.views.newAccount = new NewAccount({
                         data: {
-                            accounts: Config.data.newAccounts.accounts
+                            accounts: Config.data.accounts.filter( function(a) {return a.new;})
                         },
                         template:tmpl
                     });
@@ -53,7 +53,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                 Tools.loadTemplate("pages/aprove", function(tmpl){
                     Config.views.newAccount = new AproveAccount({
                         data: {
-                            accounts: Config.data.approvedAccounts.accounts
+                            accounts: Config.data.accounts.filter( function(a) {return a.approved;})
                         },
                         template:tmpl
                     });
@@ -64,6 +64,9 @@ var AccountsRouter = Backbone.SubRoute.extend({
             case "get":(function(){
                 Tools.loadTemplate("pages/get", function(tmpl){
                     Config.views.newAccount = new GetAccount({
+                        data: {
+                            accounts: Config.data.accounts.filter( function(a) {return a.get;}),
+                        },
                         template:tmpl
                     });
                 });
@@ -72,6 +75,9 @@ var AccountsRouter = Backbone.SubRoute.extend({
             case "resolve":(function(){
                 Tools.loadTemplate("pages/resolve", function(tmpl){
                     Config.views.newAccount = new ResolveAccount({
+                        data: {
+                            accounts: Config.data.accounts.filter( function(a) {return a.resolved;}),
+                        },
                         template:tmpl
                     });
                 });
