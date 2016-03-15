@@ -9,7 +9,9 @@
 
 var Router = Backbone.Router.extend({
     routes:{
-        "":"accounts",
+        "":"dashboard",
+        "auth":"auth",
+        "dashboard":"dashboard",
         "accounts":"accounts",
         "accounts/:any":"accounts",
         "notifications":"notifications",
@@ -18,6 +20,24 @@ var Router = Backbone.Router.extend({
 
     before:function(){
         console.log("bla");
+    },
+
+    auth:function(){
+        Tools.loadTemplate('pages/auth', function(tmpl){
+            Config.views.notifications = new NotificationsView({
+                template:tmpl
+            });
+            Config.starter.accountWrap = false;
+        });
+    },
+
+    dashboard:function(){
+        Tools.loadTemplate('pages/dashboard', function(tmpl){
+            Config.views.notifications = new NotificationsView({
+                template:tmpl
+            });
+            Config.starter.accountWrap = false;
+        });
     },
 
     accounts:function(){
