@@ -24,9 +24,47 @@ var AccountsRouter = Backbone.SubRoute.extend({
         switch(filter){
             case "new":(function(){
                 Tools.loadTemplate("pages/new", function(tmpl){
-                   Config.views.newAccount = new NewAccount({
-                       template:tmpl
-                   });
+                    Config.views.newAccount = new NewAccount({
+                        data: {
+                            accounts: Config.data.newAccounts.accounts,
+                            sort: function(array, column ){
+                                console.log("sort");
+
+                                array = array.slice(); // clone, so we don't modify the underlying data
+
+                                var sortedArray = array.sort( function ( a, b ) {
+                                    return a[ column ] < b[ column ] ? -1 : 1;
+                                });
+
+                                sortedArray.filter(function(account) {
+                                    var accept = false;
+                                    for (k in account) {
+                                        var val = account[k];
+                                        var found = val.indexOf("1");
+                                        accept = accept || found;
+                                    }
+                                    return accept;
+                                });
+
+                                return sortedArray;
+                            }
+                        },
+
+                        template:tmpl,
+
+
+                    });
+
+                    Config.views.newAccount.on("activate", function(event) {
+                        console.log("add account");
+                        Config.data.newAccounts.accounts.push({});
+                    });
+
+                    Config.views.newAccount.on( 'sort', function ( event, column ) {
+                        console.log( 'Sorting by ' + column );
+                        this.set( 'sortColumn', column );
+                    });
+
                 });
             })();
                 break;
@@ -34,6 +72,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
             case "aprove":(function(){
                 Tools.loadTemplate("pages/aprove", function(tmpl){
                     Config.views.newAccount = new AproveAccount({
+                        data: Config.data.approvedAccounts,
                         template:tmpl
                     });
                 });
