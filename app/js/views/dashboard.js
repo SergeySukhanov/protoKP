@@ -11,7 +11,11 @@ var DashboardView = Ractive.extend({
     el:"#mainSection",
 
     complete:function(){
-        Tools.loadAndRenderGrid($(this.el).find(".js-grid"), Config.data.newAccounts.accounts);
+        Tools.loadAndRenderGrid(
+            $(this.el).find(".accounts-wrapper"),
+            Config.data.accounts.filter( function(a) {return a.new;})
+            //Config.data.newAccaunts()
+        );
 
         var data1 = [
             {

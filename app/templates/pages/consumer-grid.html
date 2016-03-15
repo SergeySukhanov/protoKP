@@ -3,7 +3,7 @@
     <tr>
         <th>#</th>
         <th class='sortable' on-click='sort:supplierId'>Id поставщика</th>
-        <th class='sortable' on-click='sort:number'>Номер счёта</th>
+        <th class='sortable' on-click='sort:accountNumber'>Номер счёта</th>
         <th class='sortable' on-click='sort:money'>Сумма платежа</th>
         <th class='sortable' on-click='sort:discount'>Дисконт</th>
     </tr>
@@ -13,7 +13,7 @@
     <tr>
         <td><input type="checkbox"></td>
         <td>{{supplierId}}</td>
-        <td><a href='#accounts/{{type}}/{{supplierId}}'>{{number}}</a></td>
+        <td><a href='#account/{{accountNumber}}'>{{accountNumber}}</a></td>
         <td>{{money}}</td>
         <td>{{discount}}</td>
     </tr>
