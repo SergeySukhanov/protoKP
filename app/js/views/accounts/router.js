@@ -13,27 +13,25 @@ var AccountsRouter = Backbone.SubRoute.extend({
         "*filter":"filter"
     },
 
-    filter:function(filter){
-        if(Config.views.accounts) {
-            if (!Config.starter.accountWrap) {
+    before:{
+        "*any":function(path, arr, next){
+            if (Config.starter.accounts) {
                 Config.views.accounts.render();
-            }
-            this.routeChild(filter);
-        } else {
-            var that = this;
-            Tools.loadTemplate('pages/accounts', function(tmpl){
-                console.log("AccountsView init");
-                Config.views.accounts = new AccountsView({
-                    template:tmpl
+                next();
+            }else{
+                Tools.loadTemplate('pages/accounts', function(tmpl){
+                    console.log("AccountsView init");
+                    Config.views.accounts = new AccountsView({
+                        template:tmpl
+                    });
+                    next();
                 });
-                Config.starter.accountWrap = true;
-                that.routeChild(filter);
-            });
-        }
+            }
 
+        }
     },
 
-    routeChild: function(filter) {
+    filter: function(filter) {
         var filter = filter || "new";
         switch(filter){
             case "new":(function(){
