@@ -14,16 +14,33 @@ var AccountsRouter = Backbone.SubRoute.extend({
     },
 
     filter:function(filter){
-        if(Config.views.accounts && !Config.starter.accountWrap){
-            Config.views.accounts.render();
-            Config.starter.accountWrap = true;
+        if(Config.views.accounts) {
+            if (!Config.starter.accountWrap) {
+                Config.views.accounts.render();
+            }
+            this.routeChild(filter);
+        } else {
+            var that = this;
+            Tools.loadTemplate('pages/accounts', function(tmpl){
+                console.log("AccountsView init");
+                Config.views.accounts = new AccountsView({
+                    template:tmpl
+                });
+                Config.starter.accountWrap = true;
+                that.routeChild(filter);
+            });
         }
 
-        var filter = filter || "new";
+    },
 
+    routeChild: function(filter) {
+        var filter = filter || "new";
         switch(filter){
             case "new":(function(){
                 Tools.loadTemplate("pages/new", function(tmpl){
+                    console.log($("#accountContainer"));
+
+                    console.log("NewAccount init");
                     Config.views.newAccount = new NewAccount({
                         data: {
                             accounts: Config.data.newAccounts.accounts,
@@ -96,17 +113,6 @@ var AccountsRouter = Backbone.SubRoute.extend({
             })();
                 break;
         }
-    },
-
-    initialize:function(){
-        var that = this;
-        Tools.loadTemplate('pages/accounts', function(tmpl){
-            Config.views.accounts = new AccountsView({
-                template:tmpl
-            });
-            Config.starter.accountWrap = true;
-        });
     }
-
 
 });
