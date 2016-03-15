@@ -62,20 +62,31 @@ var Tools = {
         return sortedArray;
     },
 
-
+    /**
+     * Загрузить шаблон и отрисовать грид который отображает счета потребителя
+     * @param el - элемент в который надо вывести grid
+     * @param accounts - массив счетов
+     */
     loadAndRenderGrid: function(el, accounts) {
-        var that = this;
-        Tools.loadTemplate('pages/consumer-grid', function(tmpl){
-            console.log("Consumer grid init");
-            Config.views.consumerGrid = new ConsumerGrid({
-                template:tmpl,
-                el: el,
-                data: {
-                    accounts: accounts,
-                    sort: Tools.sort
-                }
-            });
+        Config.views.consumerGrid = Tools.loadAndRenderCommon('pages/consumer-grid', ConsumerGrid, {
+            el: el,
+            data: {
+                accounts: accounts,
+                sort: Tools.sort
+            }
+        })
+    },
 
+    /**
+     * Загрузить шаблон и после загрузки создать React с шаблоном и данными
+     * @param url - url по которому грузит шаблон
+     * @param View - какоq React компонент нужно создать
+     * @param initData - данные с которыми создаётся React компонент (к ним прибавляется загруженный template)
+     */
+    loadAndRenderCommon: function(url, View, initData) {
+        Tools.loadTemplate(url, function(tmpl){
+            initData.template = tmpl;
+            return new View(initData);
         });
     }
 };

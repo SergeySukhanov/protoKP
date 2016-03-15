@@ -9,7 +9,7 @@ var ConsumerGrid = Ractive.extend({
 
     complete: function() {
         var that = this;
-        Config.views.consumerGrid.on( 'sort', function ( event, column ) {
+        this.on( 'sort', function ( event, column ) {
             console.log( 'Sorting by ' + column );
             that.set( 'sortColumn', column );
         });

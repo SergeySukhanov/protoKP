@@ -9,9 +9,9 @@
 
 var AccountsRouter = Backbone.SubRoute.extend({
     routes:{
-        "account/:id": 'showAccount',
+        //":id": 'showAccount',
         "":"filter",
-        "*filter":"filter"
+        ":filter":"filter"
     },
 
     before:{
@@ -73,7 +73,8 @@ var AccountsRouter = Backbone.SubRoute.extend({
                 });
             })();
                 break;
-            case "resolve":(function(){
+            case "resolve":
+                /*(function(){
                 Tools.loadTemplate("pages/resolve", function(tmpl){
                     Config.views.newAccount = new ResolveAccount({
                         data: {
@@ -83,7 +84,18 @@ var AccountsRouter = Backbone.SubRoute.extend({
                     });
                 });
             })();
+            */
+                Config.views.newAccount = Tools.loadAndRenderCommon("pages/resolve", ResolveAccount, {
+                    data: {accounts: Config.data.accounts.filter( function(a) {return a.resolved;})}
+                });
                 break;
+            default:
+                console.log("show account with id:" + filter);
+                Config.views.newAccount = Tools.loadAndRenderCommon("pages/account-info", AccountInfo, {
+                    data: {}
+                });
+                break;
+
         }
     },
 
