@@ -40,13 +40,20 @@ var Config = {
         },
         approvedAccounts: {
             accounts: [{
-                number: "2",
+                supplierId: "235",
+                number: "EK7463469",
                 money: "200",
-                discount: "20%"
+                discount: "10%"
             }, {
-                number: "3",
-                money: "300",
-                discount: "30%"
+                supplierId: "2335",
+                number: "EK7412001",
+                money: "100",
+                discount: "20%"
+            },{
+                supplierId: "1634",
+                number: "EK74124590",
+                money: "720",
+                discount: "10%"
             }]
         }
     }

@@ -45,7 +45,6 @@ var AccountsRouter = Backbone.SubRoute.extend({
                         data: {
                             accounts: Config.data.newAccounts.accounts
                         },
-
                         template:tmpl
                     });
                 });
@@ -55,7 +54,9 @@ var AccountsRouter = Backbone.SubRoute.extend({
             case "aprove":(function(){
                 Tools.loadTemplate("pages/aprove", function(tmpl){
                     Config.views.newAccount = new AproveAccount({
-                        data: Config.data.approvedAccounts,
+                        data: {
+                            accounts: Config.data.approvedAccounts.accounts
+                        },
                         template:tmpl
                     });
                 });

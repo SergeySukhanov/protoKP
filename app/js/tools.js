@@ -34,6 +34,9 @@ var Tools = {
         localStorage.removeItem("token");
     },
 
+    /*
+        Полезные функции
+     */
     sort: function (array, column) {
         console.log("sort");
 
@@ -54,5 +57,21 @@ var Tools = {
         });
 
         return sortedArray;
+    },
+
+    loadAndRenderGrid: function(el, accounts) {
+        var that = this;
+        Tools.loadTemplate('pages/consumer-grid', function(tmpl){
+            console.log("Consumer grid init");
+            Config.views.consumerGrid = new ConsumerGrid({
+                template:tmpl,
+                el: el,
+                data: {
+                    accounts: accounts,
+                    sort: Tools.sort
+                }
+            });
+
+        });
     }
 };

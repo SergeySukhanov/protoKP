@@ -8,5 +8,9 @@
  */
 
 var DashboardView = Ractive.extend({
-    el:"#mainSection"
+    el:"#mainSection",
+
+    complete:function(){
+        Tools.loadAndRenderGrid($(this.el).find(".js-grid"), Config.data.newAccounts.accounts);
+    }
 });
