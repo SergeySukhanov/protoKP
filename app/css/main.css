@@ -207,3 +207,28 @@ polyline{
     stroke-width: 2px;
     fill: none;
 }
+
+.inner-accounts .tabs{
+    background: transparent;
+    border: 0;
+}
+
+ul.inner-tabs {
+    list-style-type: none;
+    background: #343434;
+    margin: 0;
+}
+
+ul.inner-tabs li {
+    display: inline-block;
+}
+
+ul.inner-tabs li a {
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+ul.inner-tabs li a:hover {
+    background-color: #1D1D1D;
+}
