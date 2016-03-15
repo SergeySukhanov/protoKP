@@ -1,28 +1,26 @@
+{{#accountToken}}
 <div class="inner-header clearfix">
     <div class="small-3 columns">
-        {{#accountToken}}
+
         <div class="brand">
-            <h3>Logo</h3>
-            <h4 class="subheader">Company</h4>
+            <h3>Brand company</h3>
+            <h4 class="subheader">Description brand company</h4>
         </div>
-        {{/accountToken}}
+
     </div>
     <div class="small-6 columns">
-        {{#accountToken}}
+
         <nav class="main-menu">
             <a href="#dashboard">Dashboard</a>
             <a href="#accounts">Accounts</a>
             <a href="#responses">Responses</a>
             <a href="#notifications">Notifications</a>
         </nav>
-        {{else}}
 
-        {{/accountToken}}
     </div>
     <div class="small-3 columns">
-        {{#accountToken}}
-        <b>Login name</b>
+        <b class="accountName">Hello, {{loginName}}</b>
         <a href="javascript:void(0)" on-click="logout">Exit</a>
-        {{/accountToken}}
     </div>
 </div>
+{{/accountToken}}

@@ -9,7 +9,7 @@
 
 var Router = Backbone.Router.extend({
     routes:{
-        "":"dashboard",
+        "":"auth",
         "auth":"auth",
         "dashboard":"dashboard",
         "accounts":"accounts",
@@ -22,6 +22,8 @@ var Router = Backbone.Router.extend({
         "*any":function(path, arr, next){
             console.log(arguments);
             var token = localStorage.getItem("token");
+            var login = localStorage.getItem("loginName");
+            Config.loginName = login || "User";
 
             if(token){
                 Config.accountToken = true;

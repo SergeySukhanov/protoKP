@@ -67,3 +67,81 @@ html, body{
     font-size: 22px;
     background: #182D3C;
 }
+
+.inner-header {
+    background: rgba(64, 64, 64, 0.5);
+    padding: 5px 20px;
+    box-shadow: 0px 0px 5px 0px #1D1D1D;
+    margin-bottom: 25px;
+}
+
+.inner-header .brand h3{
+    color: #FFFFFF;
+}
+
+.inner-header .brand h4.subheader{
+    color: #D0D0D0;
+    font-size: 12px;
+    margin-top: -9px;
+    margin-left: 63px;
+}
+
+nav.main-menu {
+    margin-top: 16px;
+}
+
+nav.main-menu a {
+    color: #ffffff;
+    font-size: 21px;
+    margin: 10px 26px;
+    padding: 10px 3px;
+}
+
+nav.main-menu a:hover {
+    border-bottom: 5px solid #4298D1;
+}
+
+.accountName{
+    color: #ffffff;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+
+.accountName + a{
+    font-size: 16px;
+    margin-left: 21px;
+    display: block;
+    text-align: center;
+    color:#ffffff
+}
+
+.block-component{
+    padding: 10px 20px;
+    background: rgba(9, 10, 10, 0.38);
+    margin-bottom: 15px;
+}
+
+.block-component h3{
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.block-component.notification-component ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+.notification-component .callout.alert {
+    background-color: transparent;
+    color: #ffffff;
+    border-left: 10px solid #6F1010;
+    font-size: 14px;
+}
+
+.notification-component .callout.primary {
+    background-color: transparent;
+    color: #ffffff;
+    border-left: 10px solid #137911;
+    font-size: 14px;
+}

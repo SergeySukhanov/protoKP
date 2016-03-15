@@ -17,6 +17,7 @@ var Config = {
     controllers:{},
     routers:{},
     textTemplates:{},
+    accountToken:false,
 
     data: {
         newAccounts: {

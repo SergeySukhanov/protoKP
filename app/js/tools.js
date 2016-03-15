@@ -26,7 +26,8 @@ var Tools = {
         }
     },
 
-    login:function(){
+    login:function(login){
+        localStorage.setItem("loginName", login);
         localStorage.setItem("token", "123456789");
     },
 
