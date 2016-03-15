@@ -18,13 +18,21 @@ var Router = Backbone.Router.extend({
         "responses":"responses"
     },
 
-    before:function(){
-        console.log("bla");
+    before:{
+        "*any":function(path, arr, next){
+            console.log(arguments);
+            if(path === "auth"){
+
+            }else{
+
+            }
+            next();
+        }
     },
 
     auth:function(){
         Tools.loadTemplate('pages/auth', function(tmpl){
-            Config.views.notifications = new NotificationsView({
+            Config.views.notifications = new AuthView({
                 template:tmpl
             });
             Config.starter.accountWrap = false;
@@ -33,7 +41,7 @@ var Router = Backbone.Router.extend({
 
     dashboard:function(){
         Tools.loadTemplate('pages/dashboard', function(tmpl){
-            Config.views.notifications = new NotificationsView({
+            Config.views.notifications = new DashboardView({
                 template:tmpl
             });
             Config.starter.accountWrap = false;
