@@ -21,15 +21,18 @@ var Config = {
     data: {
         newAccounts: {
             accounts: [{
-                number: "1",
+                supplierId: "235",
+                number: "EK7463469",
                 money: "200",
                 discount: "10%"
             }, {
-                number: "2",
+                supplierId: "2335",
+                number: "EK7412001",
                 money: "100",
                 discount: "20%"
             },  {
-                number: "9",
+                supplierId: "3252",
+                number: "EK7412345",
                 money: "900",
                 discount: "15%"
             }
