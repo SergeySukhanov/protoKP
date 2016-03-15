@@ -33,7 +33,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
     },
 
     filter: function(filter) {
-        var filter = filter || "new";
+        var filter = filter || "new"; // содержит либо название вкладки, либо номер счёта
         switch(filter){
             case "new":(function(){
                 Tools.loadTemplate("pages/new", function(tmpl){
@@ -89,10 +89,9 @@ var AccountsRouter = Backbone.SubRoute.extend({
                     data: {accounts: Config.data.accounts.filter( function(a) {return a.resolved;})}
                 });
                 break;
-            default:
-                console.log("show account with id:" + filter);
+            default: // если не совпало не с одним названием вкладки, значит это номер счёта
                 Config.views.newAccount = Tools.loadAndRenderCommon("pages/account-info", AccountInfo, {
-                    data: {}
+                    data: Config.data.getAccauntByNumber(filter)
                 });
                 break;
 

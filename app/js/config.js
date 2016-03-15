@@ -67,18 +67,29 @@ var Config = {
             approved: true
         }, {
             supplierId: 611,
-            accountNumber: "EK021236",
+            accountNumber: "EK021237",
             money: "127 349.90",
             discount: "10%",
             new: true,
             get: true
         }],
 
+        /* Почему то не работает (забыл return ))) )
         newAccaunts: function () {
             Config.data.accounts.filter(function (a) {
                 return a.new
             })
+        }
+        */
+        getAccauntByNumber: function(accountNumber) {
+            var result = Config.data.accounts.filter(function (a) {
+                return a.accountNumber === accountNumber;
+            });
 
+            if (result.length > 1) {
+                console.warn("Не уникальный номер счёта: " + accountNumber);
+            }
+            return result[0];
         }
     }
 
