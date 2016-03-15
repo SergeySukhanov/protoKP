@@ -50,7 +50,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                             }
                         },
 
-                        template:tmpl,
+                        template:tmpl
 
 
                     });

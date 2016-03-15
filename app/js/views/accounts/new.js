@@ -8,5 +8,8 @@
  */
 
 var NewAccount = Ractive.extend({
-    el:"#accountContainer"
+    el:"#accountContainer",
+    complete:function(){
+
+    }
 });
