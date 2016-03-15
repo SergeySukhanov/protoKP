@@ -71,8 +71,7 @@ var Tools = {
                 el: el,
                 data: {
                     accounts: accounts,
-                    sort: Tools.sort,
-                    type:type
+                    sort: Tools.sort
                 }
             });
 
