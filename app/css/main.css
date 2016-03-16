@@ -40,7 +40,7 @@ html, body{
 }
 
 .elem-login-panel-right{
-    margin-top: 17%;
+    margin-top: 12%;
 }
 
 .brand-login h3{
@@ -126,6 +126,7 @@ nav.main-menu a:hover {
     color: #ffffff;
     font-size: 23px;
     position: relative;
+    height: 54px;
 }
 
 .block-component.notification-component ul{
@@ -185,7 +186,7 @@ nav.main-menu a:hover {
     top: 0;
     font-size: 12px;
     left: 0;
-    margin-left: 123px;
+    margin-left: 148px;
     background: #901D1D;
     padding: 6px 6px;
     border-radius: 97px;
@@ -231,4 +232,25 @@ ul.inner-tabs li a {
 
 ul.inner-tabs li a:hover {
     background-color: #1D1D1D;
+}
+
+.menu-auth{
+    z-index: 20;
+    position: relative;
+}
+
+.menu-auth ul {
+    text-align: center;
+}
+
+.menu-auth li {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 25px;
+}
+
+.menu-auth li a {
+    color: #ffffff;
+    font-size: 21px;
+    display: block;
 }

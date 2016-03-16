@@ -80,6 +80,13 @@ var Config = {
             })
 
         }
-    }
+    },
+
+    accountsToLogin:[
+        {
+            login:"Sergey",
+            password:"qwerty"
+        }
+    ]
 
 };

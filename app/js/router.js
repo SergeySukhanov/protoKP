@@ -11,6 +11,7 @@ var Router = Backbone.Router.extend({
     routes:{
         "":"auth",
         "auth":"auth",
+        "auth/:action":"auth",
         "dashboard":"dashboard",
         "accounts":"accounts",
         "accounts/:any":"accounts",
@@ -20,6 +21,7 @@ var Router = Backbone.Router.extend({
 
     before:{
         "*any":function(path, arr, next){
+            var rootPath = path.split('/')[0];
             console.log(arguments);
             var token = localStorage.getItem("token");
             var login = localStorage.getItem("loginName");
@@ -27,18 +29,38 @@ var Router = Backbone.Router.extend({
 
             if(token){
                 Config.accountToken = true;
+                if(rootPath === "auth"){
+                    Config.routers.mainRouter.navigate("dashboard", {trigger:true});
+                }else{
+                    next();
+                }
             }else{
                 Config.accountToken = false;
+                if(rootPath !== "auth"){
+                    Config.routers.mainRouter.navigate("auth", {trigger:true});
+                }else{
+                    next();
+                }
             }
-            next();
         }
     },
 
-    auth:function(){
-        Tools.loadTemplate('pages/auth', function(tmpl){
-            Config.views.notifications = new AuthView({
-                template:tmpl
-            });
+    auth:function(action){
+        var view = "auth";
+        if(action){
+            view = action;
+        }
+        Tools.loadTemplate('pages/' + view, function(tmpl){
+            if(view === "auth"){
+                Config.views.auth = new AuthView({
+                    template:tmpl
+                });
+            }else{
+                Config.views.register = new RegisterView({
+                    template:tmpl
+                });
+            }
+
             Config.starter.accountWrap = false;
         });
     },
