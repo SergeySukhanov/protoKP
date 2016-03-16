@@ -1,24 +1,38 @@
 {{#accountToken}}
 <div class="inner-header clearfix">
-    <div class="small-3 columns">
+    <div class="large-3 medium-4 small-12 columns">
 
         <div class="brand">
-            <h3>Brand company</h3>
-            <h4 class="subheader">Description brand company</h4>
+            <h3>KPMG</h3>
+            <h4 class="subheader">Казначейская платформа</h4>
         </div>
 
     </div>
-    <div class="small-6 columns">
+    <div class="small-12 show-for-small-only account-header">
+        <b class="accountName">Здраствуйте, {{loginName}}</b>
+        <a href="javascript:void(0)" on-click="logout">Выйти</a>
+    </div>
+    <div class="large-6 medium-4 small-12 columns">
 
-        <nav class="main-menu">
+        <nav class="main-menu main-menu-large show-for-large">
+            <a href="#dashboard">Инфопанель</a>
+            <a href="#accounts">Счета</a>
+            <a href="#notifications">Уведомления</a>
+        </nav>
+        <nav class="main-menu main-menu-medium show-for-medium-only">
+            <a href="#dashboard">Инфопанель</a>
+            <a href="#accounts">Счета</a>
+            <a href="#notifications">Уведомления</a>
+        </nav>
+        <nav class="main-menu main-menu-small show-for-small-only">
             <a href="#dashboard">Инфопанель</a>
             <a href="#accounts">Счета</a>
             <a href="#notifications">Уведомления</a>
         </nav>
 
     </div>
-    <div class="small-3 columns">
-        <b class="accountName">Здраствуйте, {{loginName}}</b>
+    <div class="large-3 medium-4 small-12 columns account-header show-for-medium">
+            <b class="accountName">Здраствуйте, {{loginName}}</b>
         <a href="javascript:void(0)" on-click="logout">Выйти</a>
     </div>
 </div>

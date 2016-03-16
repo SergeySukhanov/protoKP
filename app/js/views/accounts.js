@@ -8,5 +8,8 @@
  */
 
 var AccountsView = Ractive.extend({
-    el:"#mainSection"
+    el:"#mainSection",
+    complete:function(){
+
+    }
 });

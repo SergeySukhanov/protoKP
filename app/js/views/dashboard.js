@@ -71,6 +71,7 @@ var DashboardView = Ractive.extend({
 
         DrawPieChart3("#accountsPie", data1, widthAndHeight, widthAndHeight);
         DrawPieChart3("#discountPie", data2, widthAndHeight, widthAndHeight);
+        DrawPieChart4();
 
         function DrawPieChart3(elem, data, w, h){
             var width = w,
@@ -107,10 +108,56 @@ var DashboardView = Ractive.extend({
                 .attr("d", arc)
                 .style("fill", function(d) { return color(d.value); });
 
-//            g.append("text")
-//                .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-//                .attr("dy", ".35em")
-//                .text(function(d) { return d.value; });
+        }
+
+        function DrawPieChart4(){
+            $('#container').highcharts({
+                title: {
+                    text: 'График доходности операций',
+                    x: -20 //center
+                },
+                xAxis: {
+                    categories: ['08.02.2016', '09.02.2016', '10.02.2016', '11.02.2016', '12.02.2016', '15.02.2016',
+                        '16.02.2016', '17.02.2016', '18.02.2016', '19.02.2016']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Сумма, руб'
+                    },
+                    min:0,
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: '°C'
+                },
+                legend: {
+                    layout: 'horizontal',
+                    verticalAlign: 'bottom',
+                    borderWidth: 0
+                },
+                series: [{
+                    zIndex: 2,
+                    type:'spline',
+                    name: 'Сумма выставленных счетов',
+                    data: [100000, 140000, 250000, 280000, 90000, 180000, 200000, 210000, 190000, 300000]
+                }, {
+                    zIndex: 2,
+                    type:'spline',
+                    color:'#43b02a',
+                    name: 'Сумма выплат',
+                    data: [90000, 120000, 100000, 250000, 80000, 150000, 150000, 200000, 160000, 280000]
+                }, {
+                    color:'#003087',
+                    type:'area',
+                    zIndex:1,
+                    name: 'Суммарный размер прибыли',
+                    data: [10000, 30000, 80000, 110000, 120000, 150000, 200000, 210000, 240000,260000]
+                }]
+            });
         }
     }
 });

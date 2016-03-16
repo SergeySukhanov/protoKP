@@ -32,6 +32,7 @@ var Router = Backbone.Router.extend({
                 if(rootPath === "auth"){
                     Config.routers.mainRouter.navigate("dashboard", {trigger:true});
                 }else{
+                    Tools.currentUrl("main");
                     next();
                 }
             }else{
@@ -39,6 +40,7 @@ var Router = Backbone.Router.extend({
                 if(rootPath !== "auth"){
                     Config.routers.mainRouter.navigate("auth", {trigger:true});
                 }else{
+                    Tools.currentUrl("login");
                     next();
                 }
             }
@@ -60,6 +62,7 @@ var Router = Backbone.Router.extend({
                     template:tmpl
                 });
             }
+            Tools.currentUrl("login");
 
             Config.starter.accountWrap = false;
         });
@@ -102,6 +105,7 @@ var Router = Backbone.Router.extend({
                 template:tmpl,
                 data:Config
             });
+            Tools.currentUrl("main");
         });
         Tools.loadTemplate('layout/footer', function(tmpl){
             Config.views.footer = new FooterView({

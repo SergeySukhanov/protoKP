@@ -88,5 +88,51 @@ var Tools = {
             initData.template = tmpl;
             return new View(initData);
         });
+    },
+
+    currentUrl:function(type){
+        var hash = location.hash;
+        if(type === "main"){
+           var root = hash.split('/')[0];
+           var el = $(".main-menu");
+            if(el){
+               var list = el.children();
+                for(var i=0; i<list.length; i++){
+                    if($(list[i]).attr("href") === root){
+                        $(list[i]).addClass("active");
+                    }else{
+                        $(list[i]).removeClass("active");
+                    }
+                }
+            }
+        }else if(type === "accounts"){
+            var path = hash.split('/')[1];
+            var list = $(".inner-tabs li a");
+
+            if(list){
+                if(!path){
+                    hash = hash + "/new";
+                }
+                for(var i=0; i<list.length; i++){
+                    if($(list[i]).attr("href") === hash){
+                        $(list[i]).addClass("active");
+                    }else{
+                        $(list[i]).removeClass("active");
+                    }
+                }
+            }
+        } else if(type === "login"){
+            var list = $(".menu-auth li a");
+
+            if(list){
+                for(var i=0; i<list.length; i++){
+                    if($(list[i]).attr("href") === hash){
+                        $(list[i]).addClass("active");
+                    }else{
+                        $(list[i]).removeClass("active");
+                    }
+                }
+            }
+        }
     }
 };

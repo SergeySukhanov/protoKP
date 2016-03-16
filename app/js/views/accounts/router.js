@@ -16,8 +16,10 @@ var AccountsRouter = Backbone.SubRoute.extend({
 
     before:{
         "*any":function(path, arr, next){
+            Tools.currentUrl("main");
             if (Config.starter.accounts) {
                 Config.views.accounts.render();
+                Tools.currentUrl("accounts");
                 next();
             }else{
                 Tools.loadTemplate('pages/accounts', function(tmpl){
@@ -25,6 +27,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                     Config.views.accounts = new AccountsView({
                         template:tmpl
                     });
+                    Tools.currentUrl("accounts");
                     next();
                 });
             }

@@ -13,7 +13,6 @@ var HeaderView = Ractive.extend({
     magic:true,
     complete:function(){
         var ins = this;
-
         ins.on({
             logout:function(event){
                 Tools.logout();

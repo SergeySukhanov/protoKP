@@ -49,6 +49,14 @@ html, body{
     font-size: 57px;
 }
 
+.brand-login small{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 13px;
+    display: block;
+    margin-top: -21px;
+}
+
 .brand-login h4.subheader{
     text-align: center;
     color: #BDBDBD;
@@ -83,7 +91,6 @@ html, body{
     color: #D0D0D0;
     font-size: 12px;
     margin-top: -9px;
-    margin-left: 63px;
 }
 
 nav.main-menu {
@@ -93,11 +100,16 @@ nav.main-menu {
 nav.main-menu a {
     color: #ffffff;
     font-size: 21px;
-    margin: 10px 26px;
+    margin: 10px 10px;
     padding: 10px 3px;
+    border-bottom: 5px solid transparent;
 }
 
 nav.main-menu a:hover {
+    border-bottom: 5px solid #4298D1;
+}
+
+nav.main-menu a.active {
     border-bottom: 5px solid #4298D1;
 }
 
@@ -233,6 +245,9 @@ ul.inner-tabs li a {
 ul.inner-tabs li a:hover {
     background-color: #1D1D1D;
 }
+ul.inner-tabs li a.active {
+    background-color: #1D1D1D;
+}
 
 .menu-auth{
     z-index: 20;
@@ -253,4 +268,89 @@ ul.inner-tabs li a:hover {
     color: #ffffff;
     font-size: 21px;
     display: block;
+    border-bottom: 5px solid transparent;
+}
+
+.menu-auth li a:hover {
+    border-bottom: 5px solid #182D3C;
+}
+
+.menu-auth li a.active {
+    border-bottom: 5px solid #182D3C;
+}
+
+
+.inner-form label {
+    background: #182D3C;
+    display: inline-block;
+    color: #ffffff;
+    width: 49.5%;
+    text-align: center;
+    padding: 7px 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #182D3C;
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.inner-form input:checked + label {
+    border: 1px solid #51a6d6;
+    background: #2a5871;
+
+}
+
+nav.main-menu.main-menu-small{
+    text-align: center;
+}
+
+nav.main-menu.main-menu-small a {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    padding: 4px;
+}
+nav.main-menu.main-menu-medium a {
+    display: block;
+    padding:0 5px;
+    margin: 0;
+    border-left: 2px solid transparent;
+}
+nav.main-menu.main-menu-medium a:hover {
+    border-left: 2px solid #4298D1;
+    border-bottom:5px solid transparent;
+}
+nav.main-menu.main-menu-medium a.active {
+    border-left: 2px solid #4298D1;
+    border-bottom:5px solid transparent;
+}
+nav.main-menu.main-menu-medium{
+    text-align: left;
+}
+
+.inner-account-info{
+    padding: 15px;
+    background: rgb(255, 255, 255);
+}
+
+
+nav.main-menu.main-menu-small a.active {
+    border-bottom: 2px solid #4298D1;
+}
+nav.main-menu.main-menu-small a:hover {
+    border-bottom: 2px solid #4298D1;
+}
+
+.account-header.show-for-small-only{
+    text-align: center;
+}
+
+.account-header.show-for-small-only > * {
+    display: inline-block !important;
+    font-size: 13px !important;
 }
