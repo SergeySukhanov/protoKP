@@ -279,18 +279,18 @@ ul.inner-tabs li a.active {
 
 
 .inner-form label {
-    background: #182D3C;
     display: inline-block;
     color: #ffffff;
-    width: 49.5%;
     text-align: center;
-    padding: 7px 0px;
+    padding: 7px;
     margin-bottom: 10px;
     cursor: pointer;
-    border: 1px solid #182D3C;
+    border: 1px solid #51a6d6;
+    background: #2a5871;
     margin-right: 0;
     margin-left: 0;
     font-size: 20px;
+    width: 100%;
 }
 
 input[type="radio"] {
@@ -298,8 +298,8 @@ input[type="radio"] {
 }
 
 .inner-form input:checked + label {
-    border: 1px solid #51a6d6;
-    background: #2a5871;
+    background: #182D3C;
+    border: 1px solid #182D3C;
 
 }
 
