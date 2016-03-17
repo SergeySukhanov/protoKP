@@ -26,13 +26,25 @@ var Tools = {
         }
     },
 
+    credentials: {},
     login:function(login){
+        /*
         localStorage.setItem("loginName", login);
         localStorage.setItem("token", "123456789");
+        */
+        this.credentials = {
+            "loginName": login,
+            "token": "123456789"
+        }
+    },
+
+    getCredentials: function() {
+        return this.credentials
     },
 
     logout:function(){
-        localStorage.removeItem("token");
+        //localStorage.removeItem("token");
+        this.credentials = {};
     },
 
     /*
