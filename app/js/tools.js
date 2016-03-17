@@ -28,14 +28,14 @@ var Tools = {
 
     credentials: {},
     login:function(login){
-        /*
-        localStorage.setItem("loginName", login);
-        localStorage.setItem("token", "123456789");
-        */
-        this.credentials = {
-            "loginName": login,
-            "token": "123456789"
-        }
+
+        sessionStorage.setItem("loginName", login);
+        sessionStorage.setItem("token", "123456789");
+
+//        this.credentials = {
+//            "loginName": login,
+//            "token": "123456789"
+//        }
     },
 
     getCredentials: function() {
@@ -43,8 +43,8 @@ var Tools = {
     },
 
     logout:function(){
-        //localStorage.removeItem("token");
-        this.credentials = {};
+        sessionStorage.removeItem("token");
+//        this.credentials = {};
     },
 
     /*

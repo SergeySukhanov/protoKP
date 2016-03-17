@@ -23,19 +23,19 @@ var Router = Backbone.Router.extend({
         "*any":function(path, arr, next){
             var rootPath = path.split('/')[0];
             console.log(arguments);
-            var credentials = Tools.getCredentials();
-            /*
-            var token = localStorage.getItem("token");
-            var login = localStorage.getItem("loginName");
-            */
-            var token = credentials.token;
-            var login = credentials.login;
+//            var credentials = Tools.getCredentials();
+
+            var token = sessionStorage.getItem("token");
+            var login = sessionStorage.getItem("loginName");
+
+//            var token = credentials.token;
+//            var login = credentials.login;
 
             Config.loginName = login || "User";
 
             if(token){
                 Config.accountToken = true;
-                if(rootPath === "auth"){
+                if(rootPath === "auth" || rootPath === ""){
                     Config.routers.mainRouter.navigate("dashboard", {trigger:true});
                 }else{
                     Tools.currentUrl("main");
@@ -43,7 +43,7 @@ var Router = Backbone.Router.extend({
                 }
             }else{
                 Config.accountToken = false;
-                if(rootPath !== "auth"){
+                if(rootPath !== "auth" || rootPath === ""){
                     Config.routers.mainRouter.navigate("auth", {trigger:true});
                 }else{
                     Tools.currentUrl("login");
