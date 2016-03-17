@@ -352,3 +352,25 @@ nav.main-menu.main-menu-small a:hover {
     display: inline-block !important;
     font-size: 13px !important;
 }
+
+.free-cash {
+    background: #232323;
+    padding: 10px 0;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.free-cash b {
+    vertical-align: top;
+    position: relative;
+    top: 9px;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.free-cash span {
+    font-size: 28px;
+    font-weight: 700;
+}
+
