@@ -139,6 +139,10 @@ nav.main-menu a.active {
     position: relative;
 }
 
+.block-component span{
+    color: #ffffff;
+}
+
 .block-component.notification-component ul{
     list-style-type: none;
     margin: 0;
