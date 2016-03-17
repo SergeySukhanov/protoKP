@@ -23,8 +23,14 @@ var Router = Backbone.Router.extend({
         "*any":function(path, arr, next){
             var rootPath = path.split('/')[0];
             console.log(arguments);
+            var credentials = Tools.getCredentials();
+            /*
             var token = localStorage.getItem("token");
             var login = localStorage.getItem("loginName");
+            */
+            var token = credentials.token;
+            var login = credentials.login;
+
             Config.loginName = login || "User";
 
             if(token){
