@@ -16,9 +16,31 @@ html, body{
     background-size: cover;
 }
 
-#mainSection{
-    margin: 34px;
+#commonInfo {
+    height: 80px;
+    margin-left: 46px;
+    margin-right: 46px;
 }
+
+#commonInfo * {
+    line-height: 80px;
+}
+
+.page-name {
+    font-family: robotoCondensed;
+    color: #02338f;
+}
+.login-time {
+    color: #acb2c8;
+    font-size: 12pt;
+}
+
+
+#mainSection{
+    margin: 0px 34px 34px;
+}
+
+
 
 
 .company-image-login {
@@ -84,7 +106,7 @@ html, body{
     background: #00338e;
     padding: 5px 20px;
 
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .inner-header .brand h3{
@@ -134,17 +156,27 @@ nav.main-menu a.active {
 }
 
 .block-component{
-    padding: 10px 20px;
+     padding: 10px 20px;
     /* background: rgba(9, 10, 10, 0.38); */
     background-color: white;
     margin-bottom: 24px;
     border-radius: 10px;
 }
 
+/*
+.block-component-header{
+    font-family: robotoCondensedLightHeader;
+    color: #697080;
+}
+*/
 .block-component h3{
+    /*
     color: #ffffff;
     font-size: 23px;
     position: relative;
+    */
+    font-family: robotoCondensedLightHeader;
+    color: #697080;
 }
 
 .block-component span{
@@ -392,7 +424,13 @@ nav.main-menu.main-menu-small a:hover {
 
 @font-face {
     font-family: robotoCondensed;
-    src: url(../fonts/Roboto-Black.ttf);
+    src: url(../fonts/Roboto-Condensed.ttf);
+}
+
+@font-face {
+    font-family: robotoCondensedLightHeader;
+    font-size: 21px;
+    src: url(../fonts/ROBOTOCONDENSED-LIGHT.ttf);
 }
 
 
