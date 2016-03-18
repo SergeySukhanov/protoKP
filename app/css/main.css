@@ -11,10 +11,15 @@ html, body{
 #wrapper{
     width:100%;
     min-height:100%;
-    background-image: url(../images/bg.jpg);
+    /*background-image: url(../images/bg.jpg); */
+    background-color: #e7ebf4;
     background-size: cover;
-
 }
+
+#mainSection{
+    margin: 34px;
+}
+
 
 .company-image-login {
     background-image: url(../images/company_profile.jpg);
@@ -76,9 +81,9 @@ html, body{
 }
 
 .inner-header {
-    background: rgba(64, 64, 64, 0.5);
+    background: #00338e;
     padding: 5px 20px;
-    box-shadow: 0px 0px 5px 0px #1D1D1D;
+
     margin-bottom: 25px;
 }
 
@@ -102,6 +107,7 @@ nav.main-menu a {
     margin: 10px 10px;
     padding: 10px 3px;
     border-bottom: 5px solid transparent;
+    font-family: robotoCondensed;
 }
 
 nav.main-menu a:hover {
@@ -129,8 +135,10 @@ nav.main-menu a.active {
 
 .block-component{
     padding: 10px 20px;
-    background: rgba(9, 10, 10, 0.38);
-    margin-bottom: 15px;
+    /* background: rgba(9, 10, 10, 0.38); */
+    background-color: white;
+    margin-bottom: 24px;
+    border-radius: 10px;
 }
 
 .block-component h3{
@@ -146,6 +154,10 @@ nav.main-menu a.active {
 .block-component.notification-component ul{
     list-style-type: none;
     margin: 0;
+}
+
+.summary-component, .notification-component{
+    height: 294px;
 }
 
 .notification-component .callout.alert {
@@ -377,4 +389,11 @@ nav.main-menu.main-menu-small a:hover {
     font-size: 28px;
     font-weight: 700;
 }
+
+@font-face {
+    font-family: robotoCondensed;
+    src: url(../fonts/Roboto-Black.ttf);
+}
+
+
 
