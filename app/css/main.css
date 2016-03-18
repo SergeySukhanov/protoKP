@@ -8,6 +8,9 @@ html, body{
     height:100%
 }
 
+h3{ /* переопредел€ю foundation */
+    margin-bottom: 0px;
+}
 #wrapper{
     width:100%;
     min-height:100%;
@@ -175,7 +178,8 @@ nav.main-menu a.active {
     font-size: 23px;
     position: relative;
     */
-    font-family: robotoCondensedLightHeader;
+    font-size: 21pt;
+    font-family: robotoCondensedLight;
     color: #697080;
 }
 
@@ -223,19 +227,23 @@ nav.main-menu a.active {
 }
 
 .cash-number{
+    /*
     padding-top: 15px;
     padding-bottom: 35px;
     text-align: center;
+    */
 }
 
 .cash-number b{
     font-size: 27px;
     display: block;
-    color: #ffffff;
+    font-family: robotoBold;
+    color: #697082;
 }
 
 .cash-number small{
-    color: #ffffff;
+    color: #adb4c7;
+    font-family: robotoBold;
     font-size: 12px;
 }
 
@@ -464,11 +472,21 @@ nav.main-menu.main-menu-small a:hover {
     font-family: robotoCondensed;
     src: url(../fonts/Roboto-Condensed.ttf);
 }
-
+/*
 @font-face {
     font-family: robotoCondensedLightHeader;
     font-size: 21pt;
-    src: url(../fonts/ROBOTOCONDENSED-LIGHT.ttf);
+    src: url(../fonts/Roboto-CondensedLight.ttf);
+}
+*/
+@font-face {
+    font-family: robotoCondensedLight;
+    src: url(../fonts/Roboto-CondensedLight.ttf);
+}
+
+@font-face {
+    font-family: robotoBold;
+    src: url(../fonts/Roboto-Bold.ttf);
 }
 
 @font-face {
