@@ -8,7 +8,7 @@ html, body{
     height:100%
 }
 
-h3{ /* переопределяю foundation */
+h3{ /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ foundation */
     margin-bottom: 0px;
 }
 #wrapper{
@@ -321,19 +321,29 @@ polyline{
 
 ul.inner-tabs {
     list-style-type: none;
-     /*background: #343434;*/
     background: #abb3c6;
     margin: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    height: 59px;
+    border-radius: 9px;
 }
 
 ul.inner-tabs li {
-    display: inline-block;
+    width: 21%;
+    height: 100%;
 }
 
 ul.inner-tabs li a {
     color: #ffffff;
-    display: inline-block;
     padding: 10px 20px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    height: 100%;
 }
 
 ul.inner-tabs li a:hover {

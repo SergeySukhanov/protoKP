@@ -30,7 +30,7 @@ var Tools = {
     login:function(login, password){
         var enter = false;
         Config.starter.accounts.forEach(function(elem, index){
-           if(elem.login === login || elem.password === password){
+           if(elem.login === login && elem.password === password){
                 enter = true;
            }
         });
