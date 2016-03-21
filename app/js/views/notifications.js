@@ -10,5 +10,12 @@
 
 var NotificationsView = Ractive.extend({
     el:"#mainSection",
-    template:"<div>notifications</div>"
+    template:"<div>notifications</div>",
+    complete: function(){
+        Tools.loadAndRenderCommon("pages/common-panel", CommonView, {
+            data: {
+                pageName: "Уведомления"
+            }
+        });
+    }
 });

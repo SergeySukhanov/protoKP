@@ -10,6 +10,11 @@
 var AccountsView = Ractive.extend({
     el:"#mainSection",
     complete:function(){
+        Tools.loadAndRenderCommon("pages/common-panel", CommonView, {
+            data: {
+                pageName: "Счета"
+            }
+        });
 
     }
 });

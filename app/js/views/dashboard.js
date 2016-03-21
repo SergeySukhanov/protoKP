@@ -17,6 +17,12 @@ var DashboardView = Ractive.extend({
             //Config.data.newAccaunts()
         );
 
+        Tools.loadAndRenderCommon("pages/common-panel", CommonView, {
+            data: {
+                pageName: "Инфопанель"
+            }
+        });
+
         var data1 = [
             {
                 label:"ООО «Финанс»",
