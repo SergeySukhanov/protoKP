@@ -16,6 +16,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
 
     before:{
         "*any":function(path, arr, next){
+            Config.starter.dashboardRange = false;
             Tools.currentUrl("main");
             Tools.loadTemplate('pages/accounts', function(tmpl){
                 console.log("AccountsView init");

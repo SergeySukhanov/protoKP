@@ -36,7 +36,6 @@ h3{ /* ������������� foundation */
 .login-time {
     color: #acb2c8;
     font-size: 12pt;
-    margin-bottom: 32px;
 }
 
 
@@ -511,16 +510,27 @@ nav.main-menu.main-menu-small a:hover {
 
 .range-interval {
     clear: both;
+    margin: 0;
+    line-height: 1px !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+    display: flex;
+    height: 59px;
+    border-radius: 9px;
     text-align: right;
-    line-height: 1px;
-    position: absolute;
-    right: 0;
-    margin-top: 37px;
-    margin-right: 6px;
-    width: 70%;
+    position: relative;
+    top: -14px;
 }
 
 .range-interval input{
     display: inline-block;
-    width: 48%;
+    width: 26%;
+}
+.range-interval span{
+    margin: 0 14px;
+    font-size: 19px;
+    color: #acb2c8;
+    line-height: 1px !important;
+    margin-top: 18px;
 }

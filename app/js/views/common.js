@@ -3,6 +3,7 @@
  */
 
 var CommonView = Ractive.extend({
-    el:"#commonInfo"
+    el:"#commonInfo",
+    magic:true
 
 });
