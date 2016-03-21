@@ -321,7 +321,8 @@ polyline{
 
 ul.inner-tabs {
     list-style-type: none;
-    background: #343434;
+     /*background: #343434;*/
+    background: #abb3c6;
     margin: 0;
 }
 
@@ -336,10 +337,10 @@ ul.inner-tabs li a {
 }
 
 ul.inner-tabs li a:hover {
-    background-color: #1D1D1D;
+    background-color: #00338e;
 }
 ul.inner-tabs li a.active {
-    background-color: #1D1D1D;
+    background-color: #00338e;
 }
 
 .menu-auth{
