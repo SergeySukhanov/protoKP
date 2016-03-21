@@ -17,7 +17,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
     before:{
         "*any":function(path, arr, next){
             Tools.currentUrl("main");
-            if (Config.starter.accounts) {
+            if (Config.views.accounts) {
                 Config.views.accounts.render();
                 Tools.currentUrl("accounts");
                 next();

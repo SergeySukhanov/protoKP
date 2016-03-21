@@ -23,7 +23,6 @@ var Config = {
                 login:"Людмила",
                 password:"password"
             }
-
         ]
     },
 
