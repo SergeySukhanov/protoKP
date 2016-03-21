@@ -15,6 +15,7 @@ var NotificationsView = Ractive.extend({
         Tools.loadAndRenderCommon("pages/common-panel", CommonView, {
             data: {
                 accountToken:Config.accountToken,
+                dashboardRange:Config.starter.dashboardRange,
                 pageName: "Уведомления"
             }
         });

@@ -9,6 +9,7 @@
 
 var DashboardView = Ractive.extend({
     el:"#mainSection",
+    magic:true,
 
     complete:function(){
         Tools.loadAndRenderGrid(
@@ -20,6 +21,7 @@ var DashboardView = Ractive.extend({
         Tools.loadAndRenderCommon("pages/common-panel", CommonView, {
             data: {
                 accountToken:Config.accountToken,
+                dashboardRange:Config.starter.dashboardRange,
                 pageName: "Инфопанель"
             }
         });

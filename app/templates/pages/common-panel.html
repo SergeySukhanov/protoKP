@@ -4,9 +4,15 @@
         {{pageName}}
     </h3>
 </div>
-<div class="large-6 medium-6 small-6 columns">
+<div class="large-6 medium-6 small-6 columns" style="position: relative;">
     <p class="login-time" style="float: right!important;">
         Последний вход вчера в 12:24
     </p>
+    {{#dashboardRange}}
+    <p class="range-interval">
+        <input type="date"/>
+        <input type="date"/>
+    </p>
+    {{/dashboardRange}}
 </div>
 {{/accountToken}}

@@ -22,6 +22,7 @@ var Router = Backbone.Router.extend({
     before:{
         "*any":function(path, arr, next){
             var rootPath = path.split('/')[0];
+            Config.starter.dashboardRange = false;
             console.log(arguments);
 //            var credentials = Tools.getCredentials();
 
@@ -75,6 +76,7 @@ var Router = Backbone.Router.extend({
     },
 
     dashboard:function(){
+        Config.starter.dashboardRange = true;
         Tools.loadTemplate('pages/dashboard', function(tmpl){
             Config.views.notifications = new DashboardView({
                 template:tmpl

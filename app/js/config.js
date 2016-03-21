@@ -10,6 +10,7 @@
 var Config = {
     starter:{
         accountWrap:false,
+        dashboardRange:false,
         accounts:[
             {
                 login:"Сергей",
