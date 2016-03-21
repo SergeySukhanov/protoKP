@@ -1,7 +1,7 @@
 <table>
     <thead>
     <tr>
-        <th>#</th>
+        <th style="position: relative; top: 6px;"><input type="checkbox"></th>
         <th class='sortable' on-click='sort:supplierId'>Id поставщика</th>
         <th class='sortable' on-click='sort:accountNumber'>Номер счёта</th>
         <th class='sortable' on-click='sort:money'>Сумма платежа</th>
@@ -11,7 +11,7 @@
     <tbody>
     {{#each sort( accounts, sortColumn ) :num}}
     <tr>
-        <td><input type="checkbox"></td>
+        <td><input style="position: relative; top: 6px;" type="checkbox"></td>
         <td>{{supplierId}}</td>
         <td><a href='#accounts/{{accountNumber}}'>{{accountNumber}}</a></td>
         <td>{{money}}</td>
