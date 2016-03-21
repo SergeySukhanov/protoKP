@@ -192,10 +192,11 @@ nav.main-menu a.active {
     margin: 0;
 }
 
+/*
 .summary-component, .notification-component{
     height: 294px;
 }
-
+*/
 .notification-component .callout.alert {
     background-color: rgb(255, 255, 255);
     color: #212121;
