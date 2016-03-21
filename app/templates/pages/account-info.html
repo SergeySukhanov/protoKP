@@ -1,13 +1,24 @@
 <div class="small-12 account-info block-component clearfix">
 
-    <h3>Счёт</h3>
     <div class="large-6 medium-6 small-12 columns">
+        <h3>Счёт</h3>
+        <!--
         <div class="inner-account-info">
             <h4>ЗАО «Стройтехинжиниринг»</h4>
             <p>Номер счета: {{accountNumber}}</p>
             <p>supplier: {{supplierId}}</p>
             <p>Деньги: {{money}} рублей</p>
             <p>Скидка: {{discount}}</p>
+        </div>
+        -->
+        <div>
+            <span style="color: #464e61; font-family: robotoBold; font-size: 16pt;">ЗАО «Стройтехинжиниринг»</span>
+            <div style="margin-top: 30px; font-family: robotoRegular; color: #a2aabf">
+                <p>Номер счета: {{accountNumber}}</p>
+                <p>supplier: {{supplierId}}</p>
+                <p>Деньги: {{money}} рублей</p>
+                <p>Скидка: {{discount}}</p>
+            </div>
         </div>
     </div>
     <div class="large-6 medium-6 small-12 columns chart-item" id="chart-item">
