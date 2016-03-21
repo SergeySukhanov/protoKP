@@ -19,6 +19,7 @@ var DashboardView = Ractive.extend({
 
         Tools.loadAndRenderCommon("pages/common-panel", CommonView, {
             data: {
+                accountToken:Config.accountToken,
                 pageName: "Инфопанель"
             }
         });
