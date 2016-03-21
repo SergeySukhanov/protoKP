@@ -15,9 +15,10 @@ var AuthView = Ractive.extend({
 
         ins.on({
             login:function(event){
-                var val = $("#loginInput").val();
-                Tools.login(val);
-                Config.routers.mainRouter.navigate("dashboard", {trigger:true});
+                var login = $("#loginInput").val();
+                var password = $("#passwordInput").val();
+                Tools.login(login, password);
+//                Config.routers.mainRouter.navigate("dashboard", {trigger:true});
             }
         });
     }
