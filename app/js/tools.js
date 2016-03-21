@@ -98,7 +98,8 @@ var Tools = {
     loadAndRenderCommon: function(url, View, initData) {
         Tools.loadTemplate(url, function(tmpl){
             initData.template = tmpl;
-            return new View(initData);
+            Config.views.common = new View(initData)
+            return Config.views.common;
         });
     },
 

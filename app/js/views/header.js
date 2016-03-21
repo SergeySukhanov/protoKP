@@ -17,6 +17,8 @@ var HeaderView = Ractive.extend({
             logout:function(event){
                 Tools.logout();
                 Config.routers.mainRouter.navigate("auth", {trigger:true});
+                console.log(CommonView);
+                Config.views.common.teardown()
             }
         })
     }
