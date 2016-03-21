@@ -27,10 +27,21 @@ var Tools = {
     },
 
     credentials: {},
-    login:function(login){
+    login:function(login, password){
+        var enter = false;
+        Config.starter.accounts.forEach(function(elem, index){
+           if(elem.login === login || elem.password === password){
+                enter = true;
+           }
+        });
+        if(enter){
+            sessionStorage.setItem("loginName", login);
+            sessionStorage.setItem("token", "123456789");
+            Config.routers.mainRouter.navigate("dashboard", {trigger:true});
+        }else{
+            alert("Неправильные логин или пароль")
+        }
 
-        sessionStorage.setItem("loginName", login);
-        sessionStorage.setItem("token", "123456789");
 
 //        this.credentials = {
 //            "loginName": login,

@@ -9,7 +9,22 @@
 
 var Config = {
     starter:{
-        accountWrap:false
+        accountWrap:false,
+        accounts:[
+            {
+                login:"Сергей",
+                password:"password"
+            },
+            {
+                login:"Денис",
+                password:"password"
+            },
+            {
+                login:"Людмила",
+                password:"password"
+            }
+
+        ]
     },
 
     views:{},
