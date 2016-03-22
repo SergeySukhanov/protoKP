@@ -35,8 +35,10 @@ var Config = {
     accountToken:false,
 
     data: {
+        money: 345.333,
 
         accounts: [{
+            selected: false,
             supplierId: 235,
             accountNumber: "EK7463469",
             money: "127 647.90",
@@ -45,6 +47,7 @@ var Config = {
             resolved: true,
             approved: true
         }, {
+            selected: false,
             supplierId: 2335,
             accountNumber: "EK7412001",
             money: "89 211.00",
@@ -52,6 +55,7 @@ var Config = {
             resolved: true,
             get: true
         }, {
+            selected: false,
             supplierId: 3252,
             accountNumber: "EK7412345",
             money: "169 109.90",
@@ -60,12 +64,14 @@ var Config = {
             resolved: true,
             get: true
         }, {
+            selected: false,
             supplierId: 1634,
             accountNumber: "EK74124590",
             money: "119 991.10",
             discount: "10%",
             approved: true
         }, {
+            selected: false,
             supplierId: 9200,
             accountNumber: "EK7414389",
             money: "127 647.90",
@@ -74,6 +80,7 @@ var Config = {
             get: true,
             approved: true
         }, {
+            selected: false,
             supplierId: 488,
             accountNumber: "EK021236",
             money: "89 211.90",
@@ -81,6 +88,7 @@ var Config = {
             new: true,
             approved: true
         }, {
+            selected: false,
             supplierId: 611,
             accountNumber: "EK021237",
             money: "127 349.90",

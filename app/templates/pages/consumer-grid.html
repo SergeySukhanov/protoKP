@@ -11,7 +11,8 @@
     <tbody>
     {{#each sort( accounts, sortColumn ) :num}}
     <tr>
-        <td><input style="position: relative; top: 6px;" type="checkbox"></td>
+        <td><input style="position: relative; top: 6px;"
+                   type="checkbox" checked='{{selected}}' on-change="selectAccount"></td>
         <td>{{supplierId}}</td>
         <td><a href='#accounts/{{accountNumber}}'>{{accountNumber}}</a></td>
         <td>{{money}}</td>

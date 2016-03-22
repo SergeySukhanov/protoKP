@@ -12,5 +12,19 @@ var NewAccount = Ractive.extend({
 
     complete:function(){
         Tools.loadAndRenderGrid($(this.el).find(".js-grid"), this.get().accounts, "new");
+
+
+        var calculation = Tools.loadAndRenderCommon("pages/calculation", Calculation, {
+            el: $(this.el).find(".calculation"),
+            data: {
+                money: this.get("money")
+            }
+        });
+/*
+        grid.on("selectAccount", function() {
+            console.log("selectAccount");
+            console.log(arguments);
+        });
+*/
     }
 });
