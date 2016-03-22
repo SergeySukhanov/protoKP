@@ -35,7 +35,7 @@ var Config = {
     accountToken:false,
 
     data: {
-        money: 345.333,
+        totalMoney: 0,
 
         accounts: [{
             selected: false,

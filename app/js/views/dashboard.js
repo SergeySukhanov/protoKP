@@ -26,6 +26,18 @@ var DashboardView = Ractive.extend({
             }
         });
 
+        this.on("approve", function() {
+            var moneyStr = this.get("money");
+            var money = Number(moneyStr);
+            console.log(money);
+            if (money) {
+                Config.data.totalMoney = money;
+            } else {
+                console.warn("введённое значение: " + moneyStr + " не число");
+            }
+        });
+
+
         var data1 = [
             {
                 label:"ООО «Финанс»",

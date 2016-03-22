@@ -17,7 +17,7 @@ var NewAccount = Ractive.extend({
         var calculation = Tools.loadAndRenderCommon("pages/calculation", Calculation, {
             el: $(this.el).find(".calculation"),
             data: {
-                money: this.get("money")
+                totalMoney: this.get("totalMoney")
             }
         });
 /*

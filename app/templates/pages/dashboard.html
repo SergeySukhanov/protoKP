@@ -2,78 +2,37 @@
     <div class="small-12 small-medium-12 medium-8 columns" style="padding:0;">
         <div class="small-12 small-centered clearfix">
             <div class="large-7 medium-8 small-12 columns" data-equalizer="left">
-                <div class="small-12 small-centered block-component notification-component" style="height: 296px">
+
+                <div class="small-12 small-centered block-component notification-component" style="height: 350px">
                     <h3 class="block-component-header">
-                        Уведомления (12)
+                        Установка доходности
                     </h3>
                     <hr>
-                    <div>
-                        <div style="position: relative">
-                            <div class="notification-label" style="background-color: #02a2a0"></div>
-                            <div class="notification-message">
-                                <div class="small-12 small-medium-12 medium-12 columns">
-                                    <div class="notification-message-time">
-                                        14:45 12.02.2016
-                                    </div>
-                                </div>
-                                <div class="small-12 small-medium-12 medium-12 columns" style="height: 30px">
-                                    <div class="notification-message-text">
-                                        <a href="#notifications">Есть новые предложения то поставщиков, ожидающие прибытия</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div style="position: relative">
-                            <div class="notification-label" style="background-color: #6f2079"></div>
-                            <div class="notification-message">
-                                <div class="small-12 small-medium-12 medium-12 columns">
-                                    <div class="notification-message-time">
-                                        14:45 12.02.2016
-                                    </div>
-                                </div>
-                                <div class="small-12 small-medium-12 medium-12 columns" style="height: 30px">
-                                    <div class="notification-message-text">
-                                        <a href="#notifications">Есть новые предложения то поставщиков, ожидающие прибытия</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div style="position: relative">
-                            <div class="notification-label" style="background-color: #0191da"></div>
-                            <div class="notification-message">
-                                <div class="small-12 small-medium-12 medium-12 columns">
-                                    <div class="notification-message-time">
-                                        14:45 12.02.2016
-                                    </div>
-                                </div>
-                                <div class="small-12 small-medium-12 medium-12 columns" style="height: 30px">
-                                    <div class="notification-message-text">
-                                        <a href="#notifications">Есть новые предложения то поставщиков, ожидающие прибытия</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
+
+                    <div class="large-7 columns">
+                        <input type="text" placeholder="Загрузить счёт">
+                    </div>
+                    <div class="large-5 columns">
+                        <a class="button" style="float: right !important;">Обзор</a>
+                    </div>
+                    <div class="large-12 columns">
+                        <a class="button">+</a>
+                    </div>
+                    <div class="large-12 columns">
+                        <input type="text" placeholder="Свободные денежные средства" value='{{money}}'>
+                    </div>
+                    <div class="large-12 columns">
+                        <input type="text" placeholder="Требуемая доходность">
                     </div>
 
-                    <!--
-                    <h3>Уведомления<div class="label-count">23</div></h3>
-                    <ul>
-                        <li class="callout primary">
-                            Есть новые предложения от поставщиков, ожидающие подтверждения
-                        </li>
-                        <li class="callout alert">
-                            Получено сообщение от поставщика ООО «ЗаботаПлюс»
-                        </li>
-                    </ul>
-                    <div class="button-group">
-                        <a href="#notifications" class="button btn-info">Перейти >></a>
+                    <div class="large-12 columns text-center">
+                        <a class="button" on-click='approve'>Подтвердить</a>
                     </div>
-                    -->
+
+
 
                 </div>
+
             </div>
             <div class="large-5 medium-4 small-12 columns" data-equalizer-watch="left">
                 <div class="small-12 small-centered block-component clearfix summary-component">
@@ -96,6 +55,68 @@
                 </div>
             </div>
         </div>
+
+        <div class="large-12 medium-8 small-12 columns" data-equalizer="left">
+
+            <div class="small-12 small-centered block-component notification-component" style="height: 296px">
+                <h3 class="block-component-header">
+                    Уведомления (12)
+                </h3>
+                <hr>
+                <div>
+                    <div style="position: relative">
+                        <div class="notification-label" style="background-color: #02a2a0"></div>
+                        <div class="notification-message">
+                            <div class="small-12 small-medium-12 medium-12 columns">
+                                <div class="notification-message-time">
+                                    14:45 12.02.2016
+                                </div>
+                            </div>
+                            <div class="small-12 small-medium-12 medium-12 columns" style="height: 30px">
+                                <div class="notification-message-text">
+                                    <a href="#notifications">Есть новые предложения то поставщиков, ожидающие прибытия</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="position: relative">
+                        <div class="notification-label" style="background-color: #6f2079"></div>
+                        <div class="notification-message">
+                            <div class="small-12 small-medium-12 medium-12 columns">
+                                <div class="notification-message-time">
+                                    14:45 12.02.2016
+                                </div>
+                            </div>
+                            <div class="small-12 small-medium-12 medium-12 columns" style="height: 30px">
+                                <div class="notification-message-text">
+                                    <a href="#notifications">Есть новые предложения то поставщиков, ожидающие прибытия</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="position: relative">
+                        <div class="notification-label" style="background-color: #0191da"></div>
+                        <div class="notification-message">
+                            <div class="small-12 small-medium-12 medium-12 columns">
+                                <div class="notification-message-time">
+                                    14:45 12.02.2016
+                                </div>
+                            </div>
+                            <div class="small-12 small-medium-12 medium-12 columns" style="height: 30px">
+                                <div class="notification-message-text">
+                                    <a href="#notifications">Есть новые предложения то поставщиков, ожидающие прибытия</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+
 
         <div class="small-12 small-centered clearfix">
             <div class="small-12 columns">

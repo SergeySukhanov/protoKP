@@ -41,7 +41,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                     Config.views.newAccount = new NewAccount({
                         data: {
                             accounts: Config.data.accounts.filter( function(a) {return a.new;}),
-                            money: Config.data.money
+                            totalMoney: Config.data.totalMoney
                         },
                         template:tmpl
                     });
