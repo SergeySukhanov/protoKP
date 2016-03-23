@@ -16,9 +16,7 @@
             <a href="#accounts/new" class="button btn-info">Загрузить счета</a>
             <a href="#accounts/new" class="button btn-info" on-click="removeAccount">Удалить</a>
         {{else}}
-            <a href="#accounts/new" class="button btn-info">Загрузить счета</a>
-            <a href="#accounts/new" class="button btn-info" >Предоставить скидку</a>
-            <a href="#accounts/new" class="button btn-info" >Удалить</a>
+            <a href="#accounts/new" class="button btn-info" on-click="setDiscount">Установить дисконт</a>
         {{/if}}
     </div>
 

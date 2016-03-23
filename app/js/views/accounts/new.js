@@ -31,7 +31,7 @@ var NewAccount = Ractive.extend({
             var selected = accounts.filter(function(a){return a.selected});
             console.log(selected);
             selected.forEach(function(a){
-                a.status = "removed"
+                a.status = "removed";
                 var pos = accounts.indexOf(a);
                 accounts.splice(pos, 1);
             });
@@ -43,5 +43,16 @@ var NewAccount = Ractive.extend({
             */
             //console.log(selected);
         });
+
+        this.on("setDiscount", function() {
+            var accounts = this.get("accounts");
+            var selected = accounts.filter(function(a){return a.selected});
+            console.log("setDiscount " + selected);
+            selected.forEach(function(a){
+                a.status = "approved";
+                var pos = accounts.indexOf(a);
+                accounts.splice(pos, 1);
+            });
+        })
     }
 });
