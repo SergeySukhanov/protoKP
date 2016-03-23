@@ -9,6 +9,11 @@
 
 
 var Tools = {
+
+    isCustomer: function() {
+        return sessionStorage.getItem("role") === "customer"
+    },
+
     loadTemplate:function(name, callback){
 
         if(Config.textTemplates[name]){
@@ -27,7 +32,7 @@ var Tools = {
     },
 
     credentials: {},
-    login:function(login, password){
+    login:function(login, password, customer){
         var enter = false;
         Config.starter.accounts.forEach(function(elem, index){
            if(elem.login === login && elem.password === password){
@@ -37,6 +42,11 @@ var Tools = {
         if(enter){
             sessionStorage.setItem("loginName", login);
             sessionStorage.setItem("token", "123456789");
+            if (customer) {
+                sessionStorage.setItem("role", "customer");
+            } else {
+                sessionStorage.setItem("role", "supplier");
+            }
             Config.routers.mainRouter.navigate("dashboard", {trigger:true});
         }else{
             alert("Неправильные логин или пароль")

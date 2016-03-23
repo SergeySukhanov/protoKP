@@ -43,12 +43,21 @@
         <div class="block-component">
             <div class="inner-accounts">
                 <div class="tabs" style="margin-top: 20px;">
-                    <ul class="inner-tabs">
-                        <li><a href="#accounts/new" style="padding-top: 20px; border-top-left-radius: 9px; border-bottom-left-radius: 9px;">Новые</a></li>
-                        <li><a href="#accounts/get">Полученные<br/>предложения</a></li>
-                        <li><a href="#accounts/aprove">Подтвержденные<br/> поставщиком</a></li>
-                        <li><a href="#accounts/resolve" style="padding-top: 20px;">Финализированные</a></li>
-                    </ul>
+                    {{#if customer}}
+                        <ul class="inner-tabs">
+                            <li><a href="#accounts/new" style="padding-top: 20px; border-top-left-radius: 9px; border-bottom-left-radius: 9px;">Новые</a></li>
+                            <li><a href="#accounts/get">Полученные<br/>предложения</a></li>
+                            <li><a href="#accounts/aprove">Подтвержденные<br/> поставщиком</a></li>
+                            <li><a href="#accounts/resolve" style="padding-top: 20px;">Финализированные</a></li>
+                        </ul>
+                    {{else}}
+                        <ul class="inner-tabs">
+                            <li><a href="#accounts/new" style="padding-top: 20px; border-top-left-radius: 9px; border-bottom-left-radius: 9px;">Новые</a></li>
+                            <li><a href="#accounts/get">Полученные<br/>предложения</a></li>
+                            <li><a href="#accounts/aprove">Подтвержденные<br/> Покупателем</a></li>
+                            <li><a href="#accounts/resolve" style="padding-top: 20px;">Финализированные</a></li>
+                        </ul>
+                    {{/if}}
                 </div>
 
                 <div id="accountContainer" class="panel">
