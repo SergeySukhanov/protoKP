@@ -79,7 +79,10 @@ var Router = Backbone.Router.extend({
         Config.starter.dashboardRange = true;
         Tools.loadTemplate('pages/dashboard', function(tmpl){
             Config.views.notifications = new DashboardView({
-                template:tmpl
+                template:tmpl,
+                data: {
+                    customer: Tools.isCustomer()
+                }
             });
             Config.starter.accountWrap = false;
         });
