@@ -74,6 +74,12 @@ var Config = {
             })
         },
 
+        approvedAccounts: function () {
+            return Config.data.accounts.filter(function (a) {
+                return a.status === "approved"
+            })
+        },
+
         getAccauntByNumber: function(accountNumber) {
             var result = Config.data.accounts.filter(function (a) {
                 return a.accountNumber === accountNumber;

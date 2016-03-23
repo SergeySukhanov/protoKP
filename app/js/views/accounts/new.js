@@ -32,6 +32,7 @@ var NewAccount = Ractive.extend({
             console.log(selected);
             selected.forEach(function(a){
                 a.status = "removed";
+                a.selected = false;
                 var pos = accounts.indexOf(a);
                 accounts.splice(pos, 1);
             });
@@ -50,6 +51,7 @@ var NewAccount = Ractive.extend({
             console.log("setDiscount " + selected);
             selected.forEach(function(a){
                 a.status = "approved";
+                a.selected = false;
                 var pos = accounts.indexOf(a);
                 accounts.splice(pos, 1);
             });
