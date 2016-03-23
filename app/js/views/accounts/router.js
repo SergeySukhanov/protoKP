@@ -60,6 +60,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                     Config.views.newAccount = new AproveAccount({
                         data: {
                             accounts: Config.data.approvedAccounts(),
+                            totalMoney: Config.data.totalMoney,
                             customer: Tools.isCustomer()
                         },
                         template:tmpl
@@ -95,6 +96,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                 Config.views.newAccount = Tools.loadAndRenderCommon("pages/resolve", ResolveAccount, {
                     data: {
                         accounts: Config.data.resolvedAccounts(),
+                        totalMoney: Config.data.totalMoney,
                         customer: Tools.isCustomer()
                     }
                 });
