@@ -64,7 +64,7 @@ var Config = {
             accountNumber: "EK74124590",
             money: "119 991.10",
             discount: "10%",
-            status: "approved"
+            status: "new"
         } ],
 
 
