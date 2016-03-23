@@ -1,7 +1,11 @@
 
 <div class="small-12 clearfix block-component">
     <div class="small-12 medium-12 large-6 columns">
-        <h3>Финализированные</h3>
+        {{#if customer}}
+            <h3>Финализированные</h3>
+        {{else}}
+            <h3>Финализированные покупателем</h3>
+        {{/if}}
     </div>
     <div class="small-12 medium-12 large-6 columns" style="padding-right: 0px;">
         <input type="text" placeholder="Поиск"/>

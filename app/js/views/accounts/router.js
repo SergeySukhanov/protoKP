@@ -67,7 +67,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                 });
             })();
                 break;
-
+/*
             case "get":(function(){
                 Tools.loadTemplate("pages/get", function(tmpl){
                     Config.views.newAccount = new GetAccount({
@@ -79,6 +79,7 @@ var AccountsRouter = Backbone.SubRoute.extend({
                 });
             })();
                 break;
+*/
             case "resolve":
                 /*(function(){
                 Tools.loadTemplate("pages/resolve", function(tmpl){
@@ -92,7 +93,10 @@ var AccountsRouter = Backbone.SubRoute.extend({
             })();
             */
                 Config.views.newAccount = Tools.loadAndRenderCommon("pages/resolve", ResolveAccount, {
-                    data: {accounts: Config.data.accounts.filter( function(a) {return a.resolved;})}
+                    data: {
+                        accounts: Config.data.resolvedAccounts(),
+                        customer: Tools.isCustomer()
+                    }
                 });
                 break;
             default: // если не совпало не с одним названием вкладки, значит это номер счёта

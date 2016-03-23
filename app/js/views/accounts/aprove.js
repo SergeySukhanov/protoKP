@@ -12,5 +12,18 @@ var AproveAccount = Ractive.extend({
 
     complete:function(){
         Tools.loadAndRenderGrid($(this.el).find(".js-grid"), this.get().accounts);
+
+
+        this.on("finalAccount", function() {
+            var accounts = this.get("accounts");
+            var selected = accounts.filter(function(a){return a.selected});
+            console.log("finalAccount " + selected);
+            selected.forEach(function(a){
+                a.status = "resolved";
+                a.selected = false;
+                var pos = accounts.indexOf(a);
+                accounts.splice(pos, 1);
+            });
+        });
     }
 });

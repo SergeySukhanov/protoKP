@@ -64,7 +64,7 @@ var Config = {
             accountNumber: "EK74124590",
             money: "119 991.10",
             discount: "10%",
-            status: "new"
+            status: "approved"
         } ],
 
 
@@ -77,6 +77,12 @@ var Config = {
         approvedAccounts: function () {
             return Config.data.accounts.filter(function (a) {
                 return a.status === "approved"
+            })
+        },
+
+        resolvedAccounts: function () {
+            return Config.data.accounts.filter(function (a) {
+                return a.status === "resolved"
             })
         },
 
